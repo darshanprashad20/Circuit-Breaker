@@ -1,1 +1,54 @@
+1. Parameters Sent from the Circuit Breaker to RTU (Monitoring Data)
+
+These are the parameters the MCB will continuously or periodically transmit to the RTU for remote monitoring and SCADA visualization:
+Electrical Parameters:
+
+    Voltage (V) – Measures the line voltage at the MCB terminals.
+    Current (A) – Real-time load current flowing through the breaker.
+    Power (kW, kVA, kVAR) – Real, apparent, and reactive power consumption.
+    Power Factor (PF) – Indicates efficiency of power usage.
+    Frequency (Hz) – System frequency (typically 50Hz or 60Hz).
+
+Breaker Status and Events:
+
+    Breaker Status (ON/OFF/TRIPPED) – Indicates operational state.
+    Trip Cause (Overload, Short Circuit, Earth Fault, etc.) – Reason for breaker tripping.
+    Number of Operations (Counts) – Number of open/close cycles.
+    Trip Event Log – Timestamped history of past trip events.
+    Self-Diagnosis/Health Status (Normal/Faulty) – Internal diagnostics report.
+
+Fault & Protection Data:
+
+    Overcurrent Alarm – Indicates if current exceeds a set threshold.
+    Short Circuit Detection – Indicates a short-circuit condition.
+    Earth Fault Detection – Detects leakage current to ground.
+    Thermal Overload Status – Detects overheating conditions.
+    Arc Fault Detection – Identifies abnormal arcing conditions.
+
+Communication & Network Parameters:
+
+    Communication Status (Online/Offline) – Confirms MCB’s connectivity to RTU.
+    Modbus/IEC 61850 Protocol Status – Verifies communication health.
+
+2. Parameters Used by the Circuit Breaker from Different Devices
+
+These are the parameters the MCB will receive from other devices for protection and control decision-making:
+From the Power System (Grid/Transformer/UPS/Busbar):
+
+    Incoming Voltage Level – Helps determine undervoltage or overvoltage protection.
+    Current Flow from the Transformer/Feeder – Used for load balancing and protection.
+    Power Quality Data (Harmonics, Flicker, Transients, etc.) – Helps in advanced protection schemes.
+
+From Other Circuit Breakers or Protection Relays (Interlocks & Coordination):
+
+    Upstream Breaker Status – Prevents unnecessary tripping if an upstream breaker has already disconnected a fault.
+    Downstream Breaker Status – Helps in cascading trip coordination.
+    Load Shedding Commands – MCB may be signaled to trip in case of grid instability.
+
+From SCADA/RTU Control System:
+
+    Trip or Reset Commands – Allows remote operation from SCADA.
+    Threshold Adjustments – Updates overcurrent, earth fault, and thermal limits remotely.
+    Mode Selection (Auto/Manual/Protection Mode) – Determines breaker behavior under different conditions.
+
 
