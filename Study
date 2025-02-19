@@ -117,3 +117,23 @@ From SCADA/RTU Control System:
     Mode Selection (Auto/Manual/Protection Mode) – Determines breaker behavior under different conditions.
 
 
+
+
+The terms 1P, 2P, 3P, 3P+N, and 4P in circuit breakers refer to the number of poles (P) the breaker has and how many electrical conductors it can control.
+1. Explanation of Pole Configurations:
+
+Each pole represents a circuit-breaking unit that disconnects a phase when the breaker trips.
+Breaker Type	Description	Used for
+1P (Single Pole)	Protects one phase (L) only. No neutral protection.	Single-phase circuits (e.g., residential lighting, small loads).
+2P (Double Pole)	Protects one phase (L) and neutral (N) or two phases (L1, L2).	Single-phase systems requiring neutral disconnection or small three-phase loads.
+3P (Triple Pole)	Protects three phases (L1, L2, L3) but not the neutral (N).	Three-phase loads (e.g., motors, industrial machines).
+3P+N (Triple Pole + Neutral)	Protects three phases (L1, L2, L3) and monitors the neutral (N), but neutral is not actively switched.	Three-phase systems where neutral monitoring is required (e.g., balanced loads).
+4P (Four Pole)	Protects three phases (L1, L2, L3) and also actively switches neutral (N).	Three-phase systems with unbalanced loads or where neutral needs protection (e.g., generators, UPS systems).
+2. Where Each Type is Used:
+
+    1P – Residential homes, small appliances, lighting circuits.
+    2P – Domestic applications needing full isolation, single-phase motors, air conditioners.
+    3P – Industrial motors, three-phase pumps, large HVAC systems.
+    3P+N – Industrial loads needing neutral monitoring, IT loads.
+    4P – Critical power systems, generators, unbalanced loads with neutral switching.
+
